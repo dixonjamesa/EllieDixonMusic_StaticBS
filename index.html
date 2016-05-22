@@ -130,13 +130,13 @@
 
 	<div id="music" class="container">
 		<div class="container visible-xs hidden-sm" style="padding-top:40px;text-align:center;" >
-			<iframe src="https://embed.spotify.com/?uri=spotify:album:5L7kpBs7vWfEFNs7tjeTxp&theme=white" width="280" height="320" frameborder="0" allowtransparency="true"></iframe> <!-- player widget -->
+			<iframe src="https://embed.spotify.com/?uri=spotify:album:5L7kpBs7vWfEFNs7tjeTxp&theme=white" width="300" height="340" frameborder="0" allowtransparency="true"></iframe> <!-- player widget -->
 		</div>
 		<table>
 			<tr>
 			<td style="padding-top:40px;padding-bottom:40px;">
 				
-<div class="fb-like" style="padding-bottom:30px;" data-href="http://www.facebook.com/elliedmusic/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div> <!-- FB Like widget -->
+<div class="fb-like" style="padding-bottom:30px;" data-href="http://www.facebook.com/elliedixonmusic/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div> <!-- FB Like widget -->
 
 				<p style="font-size:16px;">After 6 months of writing, recording, producing, mixing, mastering, emailing, and far too many bumps in the road, I am absolutely ecstatic to announce my first EP, <strong>Looking Forward</strong>.</p>
 				<p style="font-size:16px;"> So go ahead, give it a listen and share it around! Everything was recorded and produced with Logic on a Macbook in my parents’ bedroom, with some mastering from Metropolis Mastering. Enjoy!
@@ -153,6 +153,19 @@
 		</table>
 	</div> <!-- music -->
 
+	<div id="sep" style="position:relative;border:0;margin:0;">
+	<img class="bannerimage" src="images/banner2.jpg">
+	</div>
+
+	<div id="videos" class="container">
+		<div align="center"  style="padding-top:80px;padding-bottom:50px;">
+			<div id="ytplayer">
+		<!--iframe width="90%" height="300"  src="https://www.youtube.com/embed/1bzGV6wJw5c?version=3&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe-->
+			</div>
+		<p>Latest youtube cover of Sorry by Justin Bieber</p>
+		</div>
+	</div> <!-- videos -->
+		
 	<div class="container-fluid" id="gigs">
   		<div class="row">
     		<div class="col-lg-3 col-sm-4 col-xs-6 nopadding">
@@ -194,19 +207,6 @@
   	 	 </div>
   	</div> <!-- Gig images -->
 
-	<div id="videos" class="container">
-		<div align="center"  style="padding-top:80px;padding-bottom:50px;">
-			<div id="ytplayer">
-		<!--iframe width="90%" height="300"  src="https://www.youtube.com/embed/1bzGV6wJw5c?version=3&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe-->
-			</div>
-		<p>Latest youtube cover of Sorry by Justin Bieber</p>
-		</div>
-	</div> <!-- videos -->
-		
-	<div id="sep" style="position:relative;border:0;margin:0;">
-	<img class="bannerimage" src="images/banner2.jpg">
-	</div>
-
 	<div id="contact" class="container" style="padding-top:100px; padding-bottom:100px;">
 		<p>Email me at <a href="mailto:contact@elliedixonmusic.com">contact@elliedixonmusic.com</a>, or use any of the social media links at the bottom.</p>
 	</div>
@@ -216,11 +216,11 @@
 		  <div class="container">
         		<p style="font-size:14px;" class="navbar-text pull-left">&copy; 2015 Ellie Dixon</p>
         	  <span class="navbar-text pull-right">
-				  		<a id="footerfacebook" href="https://www.facebook.com/elliedmusic/"><img height="30px" src="ed-icons/color/facebook.svg"></a>
+				  		<a id="footerfacebook" href="https://www.facebook.com/elliedixonmusic/"><img height="30px" src="ed-icons/color/facebook.svg"></a>
 			 		    <a id="footerspotify" href="https://play.spotify.com/artist/4mvJltDSlBawXCZhq6NAso"><img height="30px" src="ed-icons/color/spotify.svg"></a>
-				  		<a id="footeryoutube" href="https://www.youtube.com/channel/UCsS3BCdeS_6wbclEfQ2jgqw"><img height="24px" src="ed-icons/color/youtube.svg"></a>
+				  		<a id="footeryoutube" href="https://www.youtube.com/c/EllieDixonMusic"><img height="24px" src="ed-icons/color/youtube.svg"></a>
 				  		<a id="footertwitter" href="https://twitter.com/elliedmusic"><img height="24px" src="ed-icons/color/twitter.svg"></a>
-				  		<a id="footersoundcloud" href="https://soundcloud.com/elliedmusic"><img height="22px" src="ed-icons/color/soundcloud.svg"></a>
+				  		<a id="footersoundcloud" href="https://soundcloud.com/elliedixonmusic"><img height="22px" src="ed-icons/color/soundcloud.svg"></a>
 	  	  	  </span>
 		  </div>
     </div> <!-- footer navbar -->
@@ -313,7 +313,7 @@
 			var windowHeight = $(window).height();
 			var scrollmmt = $(this).scrollTop();
 			var offset = 0;
-			var switchHeight = $("#videos").position().top - windowHeight - 300; // height to switch to other image
+			var switchHeight = $("#videos").position().top - windowHeight - 100; // height to switch to other image
 			var startHeight = 0; // height to have view starting to fade in
 			var fadeHeight = 250; // height over which to fade in/out
 			var stopHeight = 200; // height to have view fully gone
@@ -345,7 +345,7 @@
 					imageElt.style.height = gapheight+"px";
 				}
 				startHeight = offset - windowHeight;
-				stopHeight = $("#videos").position().top - windowHeight - 300;
+				stopHeight = $("#videos").position().top - windowHeight;
 			}
 			else if( scrollmmt > switchHeight )
 			{
